@@ -1,0 +1,5 @@
+CodeMirror-*
+*.iml
+*.ipr
+*.iws
+target
