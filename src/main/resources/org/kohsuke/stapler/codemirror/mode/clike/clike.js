@@ -176,13 +176,20 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
                        "this using const_cast inline public throw virtual delete mutable protected true " +
                        "wchar_t")
   });
+  var javaKeywords = "abstract assert boolean break byte case catch char class const continue default " +
+            "do double else enum extends false final finally float for goto if implements import " +
+            "instanceof int interface long native new null package private protected public " +
+            "return short static strictfp super switch synchronized this throw throws transient " +
+            "true try void volatile while";
   CodeMirror.defineMIME("text/x-java", {
     name: "clike",
     atAnnotations: true,
-    keywords: keywords("abstract assert boolean break byte case catch char class const continue default " + 
-                       "do double else enum extends false final finally float for goto if implements import " +
-                       "instanceof int interface long native new null package private protected public " +
-                       "return short static strictfp super switch synchronized this throw throws transient " +
-                       "true try void volatile while")
+    keywords: keywords(javaKeywords)
+  });
+  var groovyKeywords = javaKeywords + " var foreach println print def in as property";
+  CodeMirror.defineMIME("text/x-groovy", {
+      name: "clike",
+      atAnnotations: true,
+      keywords: keywords(groovyKeywords)
   });
 }());
