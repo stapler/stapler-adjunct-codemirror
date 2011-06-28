@@ -1,4 +1,7 @@
 // @include org.kohsuke.stapler.codemirror.lib.codemirror
+// @include org.kohsuke.stapler.codemirror.mode.xml.xml
+// @include org.kohsuke.stapler.codemirror.mode.javascript.javascript
+// @include org.kohsuke.stapler.codemirror.mode.css.css
 CodeMirror.defineMode("htmlmixed", function(config, parserConfig) {
   var htmlMode = CodeMirror.getMode(config, {name: "xml", htmlMode: true});
   var jsMode = CodeMirror.getMode(config, "javascript");
