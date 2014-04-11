@@ -1527,10 +1527,16 @@ var CodeMirror = (function() {
       if (typeof textarea.form.submit == "function") {
         var realSubmit = textarea.form.submit;
         function wrappedSubmit() {
-          save();
-          textarea.form.submit = realSubmit;
-          textarea.form.submit();
-          textarea.form.submit = wrappedSubmit;
+            // form can be undefined at call time
+            if (textarea.form) {
+                save();
+                textarea.form.submit = realSubmit;
+                textarea.form.submit();
+                textarea.form.submit = wrappedSubmit;
+            } else {
+                // continue up the submit stack
+                realSubmit()
+            }
         }
         textarea.form.submit = wrappedSubmit;
       }
