@@ -28,7 +28,7 @@ CodeMirror.defineMode("plsql", function(config, parserConfig) {
       return ret(ch);
     // start of a number value?
     else if (/\d/.test(ch)) {
-      stream.eatWhile(/[\w\.]/)
+      stream.eatWhile(/[\w\.]/);
       return ret("number", "number");
     }
     // multi line comment or simple operator?
@@ -73,8 +73,8 @@ CodeMirror.defineMode("plsql", function(config, parserConfig) {
       if (types && types.propertyIsEnumerable(stream.current().toLowerCase())) return ret("keyword", "variable-2");
       // is it one of the listed sqlplus keywords?
       if (sqlplus && sqlplus.propertyIsEnumerable(stream.current().toLowerCase())) return ret("keyword", "variable-3");
-      // default: just a "word"
-      return ret("word", "plsql-word");
+      // default: just a "variable"
+      return ret("word", "variable");
     }
   }
 

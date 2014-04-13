@@ -1,5 +1,5 @@
 #!/bin/bash
-#wget -O codemirror.zip http://codemirror.net/codemirror.zip
+#wget -O codemirror.zip https://github.com/marijnh/CodeMirror/archive/v2.38.zip
 #unzip codemirror.zip
 src=$(echo CodeMirror-*)
 
