@@ -1,4 +1,5 @@
 // @include org.kohsuke.stapler.codemirror.lib.codemirror
+// @include org.kohsuke.stapler.codemirror.mode.groovy.groovy
 CodeMirror.defineMode("clike", function(config, parserConfig) {
   var indentUnit = config.indentUnit,
       statementIndentUnit = parserConfig.statementIndentUnit || indentUnit,
