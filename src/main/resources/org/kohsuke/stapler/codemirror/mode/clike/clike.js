@@ -222,11 +222,6 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
     atoms: words("true false null"),
     hooks: {"#": cppHook}
   });
-  var javaKeywords = "abstract assert boolean break byte case catch char class const continue default " +
-            "do double else enum extends false final finally float for goto if implements import " +
-            "instanceof int interface long native new null package private protected public " +
-            "return short static strictfp super switch synchronized this throw throws transient " +
-            "true try void volatile while";
   CodeMirror.defineMIME("text/x-java", {
     name: "clike",
     keywords: words("abstract assert boolean break byte case catch char class const continue default " + 
@@ -234,23 +229,6 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
                     "instanceof int interface long native new package private protected public " +
                     "return short static strictfp super switch synchronized this throw throws transient " +
                     "try void volatile while"),
-    blockKeywords: words("catch class do else finally for if switch try while"),
-    atoms: words("true false null"),
-    hooks: {
-      "@": function(stream, state) {
-        stream.eatWhile(/[\w\$_]/);
-        return "meta";
-      }
-    }
-  });
-  CodeMirror.defineMIME("text/x-groovy", {
-    name: "clike",
-    keywords: words("abstract assert boolean break byte case catch char class const continue default " + 
-                    "do double else enum extends final finally float for goto if implements import " +
-                    "instanceof int interface long native new package private protected public " +
-                    "return short static strictfp super switch synchronized this throw throws transient " +
-                    "try void volatile while" +
-                    " var foreach println print def in as property"),
     blockKeywords: words("catch class do else finally for if switch try while"),
     atoms: words("true false null"),
     hooks: {
