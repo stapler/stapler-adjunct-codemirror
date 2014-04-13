@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.kohsuke.stapler</groupId>
   <artifactId>stapler-adjunct-codemirror</artifactId>
-  <version>1.3-SNAPSHOT</version>
+  <version>1.3</version>
   <name>CodeMirror library from http://codemirror.net/</name>
 
   <dependencies>
@@ -24,6 +24,7 @@
     <connection>scm:git:git://github.com/stapler/stapler-adjunct-codemirror.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/stapler/stapler-adjunct-codemirror.git</developerConnection>
     <url>https://github.com/stapler/stapler-adjunct-codemirror</url>
+    <tag>stapler-adjunct-codemirror-1.3</tag>
   </scm>
 
   <licenses>
